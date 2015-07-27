@@ -47,8 +47,9 @@ def flask_webhook(thid):
 	
 
 
-threading.Thread(target=dummy_run, args=("a",)).start()
+#threading.Thread(target=dummy_run, args=("a",)).start()
 threading.Thread(target=flask_webhook, args=("Flask",)).start()
 
 while True:
-    from_main_thread_blocking()
+    #from_main_thread_blocking()
+    from_main_thread_nonblocking()
